@@ -1,0 +1,10 @@
+<ejs-treeview (created)="iniciarTree()" (nodeSelected)="onSelect($event)" style="margin-top: 150px;" id='treeelement' [fields]='field'></ejs-treeview>
+<button style="position: absolute; top: 400px;" (click)="openDialog()">abrir</button>
+<div #container class='root-container'></div>
+
+<ejs-dialog id='dialog' [allowDragging]="true" [visible]="false" [target]='targetElement' #ejDialog  content='This is a Dialog with content' height="1000px"  width='550px'>
+  <ng-template #footerTemplate>
+    <button id="sendButton" (click)="cancelar()" class="e-control e-btn e-primary sendButton" data-ripple="true">Cancelar</button>
+    <button id="sendButton" (click)="ir()" class="e-control e-btn e-primary sendButton" data-ripple="true">Ir</button>
+</ng-template>
+</ejs-dialog> 
