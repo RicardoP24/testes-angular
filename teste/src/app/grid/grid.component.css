@@ -1,0 +1,45 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ 
+.container{
+   
+    padding: 20px;
+}
+
+/* grid.component.css */
+
+/* Custom styles for the grid */
+
+e-gridpager {
+    background-color: aqua;
+}
+
+.e-pager .e-currentitem{
+    background: #cdd4fe;
+}
+
+.e-pager .e-currentitem:hover{
+    background: #7689f6;
+}
+
+.e-pager .e-currentitem.e-numericitem.e-focused{
+    background: #7689f6;
+}
+.custom-grid {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+
+ 

@@ -1,0 +1,35 @@
+<div class="container">
+  <ejs-grid
+    #grid
+    class="custom-grid"
+    (dataBound)="customizeRows($event)"
+    [allowGrouping]="true"
+    [dataSource]="data"
+    [allowPaging]="true"
+    [allowSorting]="true"
+    [pageSettings]="pageSet"
+  >
+    <e-columns class="e-column">
+      <e-column
+        textAlign="center"
+        field="OrderID"
+        headerText="Order ID"
+        width="120"
+      ></e-column>
+      <e-column
+        textAlign="center"
+        field="CustomerName"
+        headerText="Customer Name"
+        width="150"
+      ></e-column>
+      <e-column
+        textAlign="center"
+        field="CustomerAge"
+        headerText="Customer Age"
+        width="150"
+      ></e-column>
+
+      <!-- Other columns -->
+    </e-columns>
+  </ejs-grid>
+</div>

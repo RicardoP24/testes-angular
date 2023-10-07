@@ -1,0 +1,64 @@
+<div class="grid">
+  <div class="sideMenu">
+    <ul>
+      <li><a>Home </a></li>
+      <li [class.invisible]="isVisible"><a>Sevices </a></li>
+      <li [style.color]="cor"><a>Contact </a></li>
+      <li><a>About Us </a></li>
+    </ul>
+
+    <ul>
+      <li (click)="onClick()" #tit2><a>Section 2 </a></li>
+      <li><a>Sevices </a></li>
+      <li><a>Contact </a></li>
+      <li><a>About Us </a></li>
+    </ul>
+
+    <ul>
+      <li><a>Section 3 </a></li>
+      <li><a>Sevices </a></li>
+      <li><a>Contact </a></li>
+      <li><a>About Us </a></li>
+    </ul>
+  </div>
+  <div class="topMenu">
+    <nav>
+      <h1>LOGO</h1>
+      <ul>
+        <li><a>Home </a></li>
+        <li><a>Sevices </a></li>
+        <li><a>Contact </a></li>
+        <li><a>About Us </a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <div (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)">
+      <div *ngIf="tela" id="upp2">
+        <h1>dsds</h1>
+       </div>
+       
+      <div *ngIf="!tela" id="upp1"></div>
+    </div>
+    <app-grid></app-grid>
+    <app-grid></app-grid>
+    <app-grid></app-grid>
+    <app-grid></app-grid>
+
+    <div [ngSwitch]="someValue">
+      <div class="page1" *ngSwitchCase="0">Render content for value 1</div>
+      <div class="page2" *ngSwitchCase="1">Render content for value 2</div>
+      <div class="page3" *ngSwitchCase="2">Render content for value 3</div>
+      <div *ngSwitchDefault>Render content for other values</div>
+    </div>
+
+    <button (click)="incrementar()">click</button>
+
+    <app-novo
+      #novo
+      (evento)="obterVal($event)"
+      [funcaoClique]="incrementar"
+      [texto]="text"
+    ></app-novo>
+  </main>
+</div>
